@@ -1,3 +1,5 @@
 node_modules/
 .env
 package-lock.json
+# File uploads (like images) if you don't want to track them in git
+/uploads/
