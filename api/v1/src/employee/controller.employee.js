@@ -3,7 +3,7 @@ const employeeController = {};
 
 //Create Employee
 employeeController.create = async (req, res) => {
-  console.log(req.file);
+  
   try {
     const employeeData = {
       name: req.body.name,
@@ -12,7 +12,7 @@ employeeController.create = async (req, res) => {
       designation: req.body.designation,
       gender: req.body.gender,
       course: req.body.course,
-      image: req.file ? req.file.path : "", // Save the image path if file is uploaded
+      image: req.file ? req.file.path : "", // Save image path if uploaded
     };
 
     // Check if user with the same email already exists

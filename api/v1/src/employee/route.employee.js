@@ -5,7 +5,7 @@ const {employeeValidationSchema} = require("../employee/validation.employee")
 const upload = require('../../utils/multer');
 
 
-router.post("/create-employee",validate(employeeValidationSchema), upload.single("image"), employeeController.create)
+router.post("/create-employee", upload.single('image'), validate(employeeValidationSchema), employeeController.create)
 router.get("/employee-list", employeeController.getAll)
 router.get("/get-employee/:id", employeeController.getEmployeeById)
 router.patch('/update-employee/:id',validate(employeeValidationSchema), upload.single("image"), employeeController.update)
